@@ -1,4 +1,11 @@
 # PARTE 1
+
+## Ferramentas de UML
+   * LucidChart: https://lucid.app/users/login#/login
+   * Miro: https://miro.com/
+   * Mermaid: https://www.mermaidchart.com/
+
+
 ## Diagrama UML no Lucidchart para Associação, Agregação e Composição
 Passo-a-Passo para Criar no Lucidchart
 1. Acesse o Lucidchart e crie um novo diagrama UML em branco
