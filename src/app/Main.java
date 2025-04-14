@@ -27,36 +27,19 @@ public class Main {
 
         // Demonstração da composição vs agregação
         System.out.println("\nAntes de destruir o departamento:");
-        System.out.println("- Funcionário 1: " + func1);
+        System.out.println("Funcionário 1: " + func1);
         
         // "Destruindo" o departamento (na prática, apenas deixando de referenciá-lo)
         deptTI = null;
         
         System.out.println("\nDepois de 'destruir' o departamento:");
-        // Na composição real, os funcionários seriam destruídos também
-        // Mas em Java precisamos simular isso manualmente
-        System.out.println("- Funcionário 1 ainda existe: " + func1);
-        
-        // O projeto (agregação) mantém seus membros mesmo sem o departamento
-        projetoX.listarEquipe();
+        // Na composição, os funcionários seriam destruídos também
 
-       //Criando departamento (composição)
-       Departamento deptTI2 = new Departamento("TI2");
-       deptTI2.adicionarFuncionario(func1);
-       deptTI2.adicionarFuncionario(func2);
-       deptTI2.listarFuncionarios();
+        System.out.println("Funcionário 1 ainda existe? " + func1);
+        
+       //Se funcionário continua existindo, como implementar em Departamento a destruição dos objetos funcionário?
+       // Quais alterações você precisaria fazer aqui na Main para visualizar?
+        
        
-        // Testando demissão
-        deptTI2.demitirFuncionario(func2);
-        deptTI2.listarFuncionarios();
-        
-        // Testando fechamento do departamento
-        deptTI2.fecharDepartamento();
-        deptTI2.listarFuncionarios(); // Lista vazia
-        
-        //Forçando o garbage collector para demonstrar o finalize()
-        deptTI = null;
-        System.gc();
-        System.out.println("E agora? " + func1);
     }
 }
